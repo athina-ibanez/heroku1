@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Regression API</title>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Salary Analysis</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="name_Black" placeholder="Black" required="required" />
+      <input type="text" name="name_Black SUV" placeholder="Black SUV" required="required" />
+		  <input type="text" name="name_Lux" placeholder="Lux" required="required" />
+      <input type="text" name="name_Lux Black" placeholder="Lux Black" required="required" />
+      <input type="text" name="name_Lux Black XL" placeholder="Lux Black XL" required="required" />
+      <input type="text" name="name_Lyft" placeholder="Lyft" required="required" />
+      <input type="text" name="name_Lyft XL" placeholder="Lyft XL" required="required" />
+      <input type="text" name="name_Shared" placeholder="Shared" required="required" />
+      <input type="text" name="name_Taxi" placeholder="Taxi" required="required" />
+      <input type="text" name="name_UberPool" placeholder="UberPool" required="required" />
+      <input type="text" name="name_UberX" placeholder="UberX" required="required" />
+      <input type="text" name="name_UberXL" placeholder="UberXL" required="required" />
+      <input type="text" name="name_WAV" placeholder="WAV" required="required" /> <br>
+      <br>
+      <input type="text" name="cab_type_Lyft" placeholder="cab_type_Lyft" required="required" />
+      <input type="text" name="cab_type_Uber" placeholder="cab_type_Uber" required="required" /> <br>
+      <br>
+      <input type="text" name="source_Back Bay" placeholder="source: Back Bay" required="required" />
+      <input type="text" name="source_Beacon Hill" placeholder="source: Beacon Hill" required="required" />
+      <input type="text" name="source_Boston University" placeholder="source: Boston University" required="required" />
+      <input type="text" name="source_Fenway" placeholder="source: Fenway" required="required" />
+      <input type="text" name="source_Financial District" placeholder="source: Financial District" required="required" />
+      <input type="text" name="source_Haymarket Square" placeholder="source: Haymarket Square" required="required" />
+      <input type="text" name="source_North End" placeholder="source: North End" required="required" />
+      <input type="text" name="source_North Station" placeholder="source: North Station" required="required" />
+      <input type="text" name="source_Northeastern University" placeholder="source: Northeastern University" required="required" />
+      <input type="text" name="source_South Station" placeholder="source: South Station" required="required" />
+      <input type="text" name="source_Theatre District" placeholder="source: Theatre District" required="required" />
+      <input type="text" name="source_West End" placeholder="source: West End" required="required" /> <br>
+      <br>
+      <input type="text" name="destination_Back Bay" placeholder="destination: Back Bay" required="required" />
+      <input type="text" name="destination_Beacon Hill" placeholder="destination: Beacon Hill" required="required" />
+      <input type="text" name="destination_Boston University" placeholder="destination: Boston University" required="required" />
+      <input type="text" name="destination_Fenway" placeholder="destination: Fenway" required="required" />
+      <input type="text" name="destination_Financial District" placeholder="destination: Financial District" required="required" />
+      <input type="text" name="destination_Haymarket Square" placeholder="destination: Haymarket Square" required="required" />
+      <input type="text" name="destination_North End" placeholder="destination: North End" required="required" />
+      <input type="text" name="destination_North Station" placeholder="destination: North Station" required="required" />
+      <input type="text" name="destination_Northeastern University" placeholder="destination: Northeastern University" required="required" />
+      <input type="text" name="destination_South Station" placeholder="destination: South Station" required="required" />
+      <input type="text" name="destination_Theatre District" placeholder="destination: Theatre District" required="required" />
+      <input type="text" name="destination_West End" placeholder="destination: West End" required="required" /> <br>
+      <br>
+      <input type="text" name="icon_ clear-day" placeholder="Weather: clear-day" required="required" />
+      <input type="text" name="icon_ clear-night" placeholder="Weather: clear-night" required="required" />
+      <input type="text" name="icon_ cloudy" placeholder="Weather: cloudy" required="required" />
+      <input type="text" name="icon_ fog" placeholder="Weather: fog" required="required" />
+      <input type="text" name="icon_ partly-cloudy-day" placeholder="Weather: partly-cloudy-day" required="required" />
+      <input type="text" name="icon_ partly-cloudy-night" placeholder="Weather: partly-cloudy-night" required="required" />
+      <input type="text" name="icon_ rain" placeholder="Weather: rain" required="required" /> <br>
+      <br>
+      <input type="text" name="distance" placeholder="distance" required="required" />
+      <input type="text" name="surge_multiplier" placeholder="surge multiplier" required="required" />
+      <input type="text" name="hour" placeholder="hour" required="required" />
+      <input type="text" name="temperature" placeholder="Temperature" required="required" />
+      
+      <br><br>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
